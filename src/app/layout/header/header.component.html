@@ -1,0 +1,66 @@
+<mat-toolbar class="bg-info mb-10 d-flex justify-content-center">
+  <mat-toolbar-row class="d-flex justify-content-around align-items-center">
+    <div>
+      <a routerLink="/" class="">
+        <mat-icon class="icon-size">delivery_dining</mat-icon>
+      </a>
+    </div>
+    <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div fxShow="true" fxHide.lt-md>
+      <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+      <a
+        *ngFor="let menuType of headerMenuTypes ; let i = index"
+        [routerLink]="['/filtered-food', menuType.id]"
+        class="btn btn-clean">
+        <div>
+          <span
+            [inlineSVG]="menuType.icon"
+            class="food-icon">
+          </span>
+        </div>{{menuType.type}}
+      </a> 
+    </div>
+    <div>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon class="icon-size">more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="" class="d-flex justify-content-around bg-info">
+        <button mat-icon-button>
+          <mat-icon>logout</mat-icon>
+        </button>
+        <button mat-icon-button class="cart-btn">
+          <mat-icon>add_shopping_cart</mat-icon>
+          <span class="badge bg-secondary cart-num">0</span>
+        </button>
+        <button mat-icon-button>
+          <mat-icon>person_outline</mat-icon>
+        </button>
+      </mat-menu>
+    </div> 
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container fxFlexFill>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a (click)="sidenav.toggle()" href="" mat-list-item><mat-icon>close</mat-icon></a>
+      <a
+        *ngFor="let menuType of headerMenuTypes ; let i = index"
+        [routerLink]="['/filtered-food', menuType.id]"
+        class="btn btn-clean">
+        <div>
+          <span
+            [inlineSVG]="menuType.icon"
+            class="food-icon">
+          </span>
+        </div>{{menuType.type}}
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content fxFlexFill class="bg-white">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+  

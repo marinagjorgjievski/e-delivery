@@ -1,0 +1,26 @@
+<div class="bg-white content d-flex flex-column flex-column-fluid">
+  <div class="container">
+    <ngx-masonry [options]="{ gutter: 10 }">
+      <app-ads 
+        ngxMasonryItem 
+        *ngFor="let adsEl of ads; let i = index"
+        [ads]="adsEl"
+        class="masonry-item">
+      </app-ads>
+    </ngx-masonry>
+    <div class="m-10 home-page-carousel">
+      <owl-carousel-o [options]="customOptions">
+        <ng-container *ngFor="let companyEl of companies; let i = index">
+          <ng-template carouselSlide>
+            <app-company-card 
+              [company]="companyEl"
+              style="width: 250px">
+            </app-company-card>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+    <app-banner></app-banner>
+  </div>
+</div>
+<app-footer></app-footer>

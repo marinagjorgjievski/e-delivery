@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: large;
+  background-color: #ffffffab;
+}
+  
+.div-image {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    height: 150px;
+  }
+}
+  
+.divtext {
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+  display: flex;
+}

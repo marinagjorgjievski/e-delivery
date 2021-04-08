@@ -1,0 +1,57 @@
+<mat-card class="example-card m-3">
+  <mat-card-header>
+    <mat-card-title>{{company.name}}</mat-card-title>
+    <mat-card-subtitle>
+      <div 
+        class="tooltip-name mb-1 elips"
+        #tooltip="matTooltip"
+        matTooltip="{{company.category}}"
+        matTooltipPosition="above"
+        matTooltipClass="blue-tooltip">
+        {{company.category}},
+      </div>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image 
+    [src]="company.avatar" 
+    alt="{{company.name}}"
+    class="px-3 rounded" 
+    alt="{{company.name}}">
+  <mat-card-content>
+    <div class="d-flex mb-2">
+      <a href="#" class="text-warning">
+        <mat-icon>star</mat-icon>
+        <mat-icon>star</mat-icon>
+        <mat-icon>star</mat-icon>
+        <mat-icon>star</mat-icon>
+        <mat-icon>star</mat-icon>
+      </a>
+    </div>
+    <div class="mb-7">
+      <div class="d-flex justify-content-between align-items-center">
+        <span class="mr-2">Подготовка:</span>
+        <a class="">{{company.preparation_time}} мин.</a>
+      </div>
+      <div class="d-flex justify-content-between align-items-cente my-1">
+        <span class="mr-2">Достава:</span>
+        <a class="">{{company.preparation_time}} мин.</a>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <span class="mr-2">Отворено:</span>
+        <div *ngIf="company.open_company; else closed_company">
+          <span class="text-success justify-content-end">
+            <mat-icon>check</mat-icon>
+          </span>
+        </div>
+        <ng-template #closed_company>
+          <span class="text-danger justify-content-end">
+            <mat-icon>close</mat-icon>
+          </span>
+        </ng-template>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="text-center">
+    <button mat-button class="text-uppercase bg-white text-info btn-menu mb-2" (click)="companyView(company.id)">Мени</button>
+  </mat-card-actions>
+</mat-card>

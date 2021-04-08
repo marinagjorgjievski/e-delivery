@@ -1,0 +1,16 @@
+<div class="check-by-company-type">
+  <label class="font-size-h3 font-weight-bolder text-dark mb-7">Пребарај по</label>
+  <div class="checkbox-list" *ngFor="let item of filteredCompanyTypes">
+    <label class="checkbox checkbox-lg  d-flex align-items-center">
+      <input 
+        type="checkbox" 
+        name="" 
+        [checked]="companyTypesFilter.includes(item)" 
+        (change)="onFilterByType(item)"/>
+      <span></span>
+      <div class="font-size-lg text-secondary font-weight-bold ml-2">{{item}}</div>
+    </label>
+  </div>
+  <button mat-button class="text-uppercase bg-info text-white btn-menu mb-2" (click)="clear()">Ресетирај</button>
+</div>
+

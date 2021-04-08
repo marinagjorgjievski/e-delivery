@@ -1,0 +1,60 @@
+<div class="content d-flex flex-column flex-column-fluid">
+  <mat-sidenav-container class="sidenav-container" fxFlexFill>
+    <mat-sidenav #companySidenav fxLayout="column" fxHide.gt-sm="true" class="company-sidenav" mode="over" opened="false" position="start">
+      <div class="flex-row-auto">
+        <div class="d-flex align-items-center justify-content-end close-sidenav m-3 p-3 text-hover-primary">
+          <button (click)="companySidenav.close()" class="btn p-0">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+        <app-check-by-company-type [menuType]="type" [filteredCompanyTypes]="filteredCompanyTypes"></app-check-by-company-type>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content class="bg-white">
+      <div class="div-image">
+        <img 
+          [src]="menu.cover_photo" 
+          class="img-fluid">
+      </div>
+      <mat-toolbar fxFlexAlign="center" fxHide.gt-sm="true" class="subheader py-2 py-lg-6 subheader-solid bg-white">
+        <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap bg-white">
+          <div class="d-flex justify-content-start flex-wrap">
+            <div class="d-flex align-items-baseline flex-wrap mr-5">
+              <h5 class="text-dark font-weight-bold my-1 mr-5">Пребарај по</h5>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button mat-icon-button (click)="companySidenav.toggle()" *ngIf="!opened">
+              <mat-icon color="info">menu</mat-icon>
+            </button>
+            <!-- <button (click)="companySidenav.toggle()" *ngIf="!opened" class="btn p-0 burger-icon burger-icon">
+              <span></span>
+            </button> -->
+          </div>
+        </div>
+      </mat-toolbar>
+      <div class="d-flex flex-column-fluid bg-white">
+        <div class="container">
+          <div class="card card-custom">
+            <div class="card-body">
+              <div class="d-flex flex-row justify-content-between">
+                <div class="flex-row-auto offcanvas-mobile border-right border-secondary">
+                  <app-check-by-company-type [menuType]="type" [filteredCompanyTypes]="filteredCompanyTypes"></app-check-by-company-type>
+                </div>
+                <div class="d-flex flex-grow-1 justify-content-center flex-wrap">
+                  <app-company-card 
+                    *ngFor="let companyEl of filteredCompanies ; let i = index"
+                    [company]="companyEl"
+                    style="width: 277px"
+                    class="mx-1"
+                    >
+                  </app-company-card> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container> 
+</div>

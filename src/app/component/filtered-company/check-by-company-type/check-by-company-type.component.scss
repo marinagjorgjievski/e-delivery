@@ -1,0 +1,9 @@
+.check-by-company-type {
+  min-width: 250px;
+}
+
+@media (max-width: 960px) {
+  .check-by-company-type {
+    padding:0 2rem;
+  }
+}

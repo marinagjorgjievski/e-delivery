@@ -1,0 +1,13 @@
+.masonry-item {
+  width: calc(50% - 5px);
+}
+
+@media (min-width: 1024px) {
+  .masonry-item {
+    width: calc(33.33% - 7px);
+  }
+}
+
+.content {
+  margin-top: 50px;
+}

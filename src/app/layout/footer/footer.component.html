@@ -1,0 +1,44 @@
+<div class="bg-info min-h-250px w-100 d-flex flex-column justify-content-between">
+  <div class="row mt-5 mx-10">
+    <div class="col-lg-3 d-flex flex-column">
+      <ul class="p-0">
+        <li>
+          <fa-icon [icon]="faArrowRight"></fa-icon>
+          <a routerLink="/home/how-to-order" title="" class="font-size-h4 text-white pl-1">Како да нарачам</a>
+        </li>
+        <li>
+          <fa-icon [icon]="faArrowRight"></fa-icon>
+          <a href="" class="font-size-h4 text-white pl-1">Услови на користење</a>
+        </li>
+        <li>
+          <fa-icon [icon]="faArrowRight"></fa-icon>
+          <a href="" class="font-size-h4 text-white pl-1">Политика на приватност</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-6 ">
+      <a routerLink="/" class="d-flex align-items-center justify-content-center mb-3 text-decoration-none" title="Почетна">
+        <button mat-icon-button>
+          <mat-icon class="icon-logo">delivery_dining</mat-icon>
+        </button>
+        <h1 class="bold-text text-white ml-3 my-0">E-Delivery</h1>
+      </a>
+      <span class="text-white font-size-h5">E-Delivery е веб страна која ви нуди разновиден избор на храна од голем број на ресторани, сендвичари, кафе барови, пекари.
+        Со еден клик нарачајте ја вашата омилена храна. Доставата ја вршиме до вашата врата.</span>
+    </div>
+    <div class="col-lg-3 d-flex justify-content-center justify-content-lg-end">
+      <div class="social-links">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://www.facebook.com" target="_blank" title="E-Delivery-Facebook"><fa-icon class="social-icons" [icon]="faFacebook"></fa-icon></a></li>
+          <li class="list-inline-item"><a href="https://www.linkedin.com" target="_blank" title="E-Delivery-LinkedIn"><fa-icon class="social-icons" [icon]="faLinkedin "></fa-icon></a></li>
+          <li class="list-inline-item"><a href="https://www.instagram.com" target="_blank" title="E-Delivery-Instagram"><fa-icon class="social-icons" [icon]="faInstagram"></fa-icon></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="text-dark order-2 order-md-1 ml-5 text-center my-2">
+    <span class="text-dark font-weight-bold mr-2">{{ currentYear }} &copy;</span>
+    <a href="https://e-delivery.com/" target="_blank" class="text-white">E-Delivery.com </a>
+    Сите права се задржани
+  </div>
+</div>

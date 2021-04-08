@@ -1,0 +1,13 @@
+<div class="ads">
+  <img 
+    [src]="ads.photo" 
+    alt="{{ads.name}}"
+    class="img-responsive rounded" />
+  <p class="text-dark font-weight-bold font-size-h4 mb-0 bottom-left-p bg-light px-2 rounded">{{ads.name}}</p>
+  <a 
+    [routerLink]="['/ad', ads.id]"
+    routerLinkActive="active"
+    style="cursor: pointer;"
+    class="btn btn-sm btn-info text-uppercase bottom-left-a"
+    >Провери</a>
+</div>

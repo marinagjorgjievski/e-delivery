@@ -1,0 +1,60 @@
+.menu-spacer {
+  flex: 1 1 auto;
+}
+  
+.icon-size {
+  font-size: 40px;
+  color: #fff;
+}
+
+@media (min-width: 1024px) {
+  mat-toolbar{
+    width: 100%;
+    position: fixed;
+    box-shadow: none;
+    height: 80px;
+    top: 0;
+    right: 0;
+    z-index: 97;
+    align-items: center;
+  }
+}
+
+mat-sidenav-container {
+  margin-top: 80px;
+}
+
+// @media (min-width:960px) {
+//   mat-toolbar-row {
+//     button {
+//       margin: 3px;
+//     }
+//   }
+// }
+
+// .mat-icon-button {
+//   background-color: transparent;
+// }
+
+.cart-btn {
+  position: relative;
+}
+
+.cart-num {
+  max-width: 25px;
+  min-width: 20px;
+  height: 20px;
+  color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: -5px;
+  left: 22px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  padding: 0 2px;
+}
+
+.toolbar-sidenav {
+  max-width: 320px;
+}

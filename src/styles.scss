@@ -1,1 +1,92 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.food-icon svg {
+  width: 30px !important;
+  height: auto;
+  color: #fff;
+}
+
+.content {
+    min-height: 100vh;
+  }
+  
+  .dropdown-toggle::after {
+    display: none !important;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .home-page-carousel {
+    .owl-carousel {
+      position: relative ;
+    }
+    
+    .owl-stage-outer {
+      overflow: hidden;
+    }
+    
+    .owl-stage {
+      display: flex;
+    }
+    
+    .owl-nav {
+      position: absolute;
+      width: 100%;
+      top: 45%;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .owl-prev {
+      margin-left: -30px;
+      cursor: pointer;
+    }
+    
+    .owl-next {
+      margin-right: -30px;
+      cursor: pointer;
+    }
+  }
+  
+  .view-menu-carousel {
+    .owl-carousel {
+      position: relative ;
+    }
+  
+    .owl-stage-outer {
+      overflow: hidden;
+    }
+  
+    .owl-stage {
+      display: flex;
+    }
+  
+    .owl-nav {
+      position: absolute;
+      width: 100%;
+      top: 25%;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .owl-prev {
+      margin-left: -30px;
+      cursor: pointer;
+    }
+  
+    .owl-next {
+      margin-right: -30px;
+      cursor: pointer;
+    }
+  }
